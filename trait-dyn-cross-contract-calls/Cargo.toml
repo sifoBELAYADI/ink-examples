@@ -1,0 +1,36 @@
+[package]
+name = "trait-incrementer-caller"
+version = "6.0.0-alpha.4"
+authors = ["Use Ink <ink@use.ink>"]
+edition = "2024"
+publish = false
+
+[dependencies]
+ink = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.4", default-features = false }
+
+dyn-traits = { path = "./traits", default-features = false }
+
+[dev-dependencies]
+ink_e2e = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.4" }
+trait-incrementer = { path = "./contracts/incrementer", default-features = false, features = ["ink-as-dependency"] }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "dyn-traits/std",
+]
+e2e-tests = []
+ink-as-dependency = []
+
+# Required to be able to run e2e test with sub-contracts
+[workspace]
+members = [
+    "contracts/incrementer",
+]
+
+[package.metadata.ink-lang]
+abi = "ink"

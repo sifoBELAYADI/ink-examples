@@ -1,0 +1,24 @@
+[package]
+name = "adder"
+version = "6.0.0-alpha.4"
+authors = ["Use Ink <ink@use.ink>"]
+edition = "2024"
+
+[dependencies]
+ink = { git = "https://github.com/use-ink/ink", tag = "v6.0.0-alpha.4", default-features = false }
+
+accumulator = { path = "../accumulator", default-features = false, features = ["ink-as-dependency"] }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "accumulator/std",
+]
+ink-as-dependency = []
+
+[package.metadata.ink-lang]
+abi = "ink"
