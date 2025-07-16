@@ -24,3 +24,4 @@ export const Link: React.FC<LinkProps> = ({ children, className, ...rest }) => {
     </a>
   );
 };
+
