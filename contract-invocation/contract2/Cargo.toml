@@ -27,3 +27,4 @@ overflow-checks = false
 
 [package.metadata.ink-lang]
 abi = "ink"
+
