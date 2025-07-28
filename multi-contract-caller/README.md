@@ -38,3 +38,4 @@ The initially called smart contract is the Adder.
 > __Note:__<br/>
 > and get the error `ExtrinsicFailed: OutOfGas`.
 > As a workaround set the maximum allowed gas manually (e.g. to 5000).
+
