@@ -35,3 +35,4 @@ pub trait Reset {
     #[ink(message)]
     fn reset(&mut self);
 }
+
