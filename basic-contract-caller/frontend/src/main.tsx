@@ -25,3 +25,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </UseInkProvider>
   </React.StrictMode>,
 );
+
