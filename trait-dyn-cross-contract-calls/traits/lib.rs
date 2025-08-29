@@ -14,3 +14,4 @@ pub trait Increment {
     #[ink(message)]
     fn get(&self) -> u64;
 }
+
