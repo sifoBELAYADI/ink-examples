@@ -84,3 +84,4 @@ export const NumberInput: React.FC<Props> = ({
     </span>
   );
 };
+
